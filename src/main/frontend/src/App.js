@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './style/App.css';
+import React, { Component } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import UploadFiles from './components/upload-files.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends Component {
+  render() {
+    return (
+    <div className='container' style={{ width: "600px" }}>
+      <div style={{ margin: "20px" }}>
+        <h3>ImageProcessor</h3>
+        <h4>Upload Files</h4>
+      </div>
+      <UploadFiles />
     </div>
-  );
+    );
+  }
 }
+
 
 export default App;

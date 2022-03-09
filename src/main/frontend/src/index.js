@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
 import App from './App';
-import FileHandler from './components/FileHandler';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './tests/reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FileHandler />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
