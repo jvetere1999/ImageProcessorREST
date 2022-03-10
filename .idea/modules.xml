@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ImageProcessorREST.iml" filepath="$PROJECT_DIR$/ImageProcessorREST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/img_processor/img_processor.iml" filepath="$PROJECT_DIR$/img_processor/img_processor.iml" />
+    </modules>
+  </component>
+</project>
