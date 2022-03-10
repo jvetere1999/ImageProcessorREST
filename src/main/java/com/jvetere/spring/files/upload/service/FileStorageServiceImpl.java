@@ -6,7 +6,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -59,5 +61,15 @@ public class FileStorageServiceImpl implements FileStorageService{
         catch (IOException e) {
             throw new RuntimeException("Could not load files.");
         }
+    }
+
+    @Override
+    public void operate(MultipartFile _file) {
+        try {
+            InputStream file = _file.getInputStream();
+            String path = this.root.resolve(_file.getOriginalFilename()).toString();
+            System.out.println(path);
+        }
+        catch (Exception e){throw new RuntimeException("Could not operate on the file. ERROR: "+e.getMessage());}
     }
 }
