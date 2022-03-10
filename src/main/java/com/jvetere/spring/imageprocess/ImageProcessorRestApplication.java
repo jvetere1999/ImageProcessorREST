@@ -1,4 +1,4 @@
-package com.jvetere.restservice;
+package com.jvetere.spring.imageprocess;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
