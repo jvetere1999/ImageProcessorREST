@@ -73,7 +73,7 @@ export default class UploadFiles extends Component {
                     <div
                         className="progress-bar progress-bar-info progress-bar-striped"
                         role="progressbar"
-                        aria-valuenow={[progress]}
+                        aria-valuenow={progress}
                         aria-valuemin="0"
                         aria-valuemax="100"
                         style={{ width: progress + "%" }}
@@ -84,7 +84,7 @@ export default class UploadFiles extends Component {
                 )}
                 
                 <label className="btn btn-default">
-                    <input type="file" onChange={this.selectedFile} />
+                    <input type="file" onChange={this.selectfile} />
                 </label>
                 
                 <button className="btn btn-success"
