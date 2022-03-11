@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-@CrossOrigin("http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:3000")
 public class FilesController {
     @Autowired
     FileStorageService storageService;
