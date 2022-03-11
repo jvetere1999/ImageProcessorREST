@@ -17,20 +17,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-@CrossOrigin("http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:8081")
 public class FilesController {
     @Autowired
     FileStorageService storageService;
     @PostMapping("/upload")
-    public ResponseEntity<ResponseMessage> upload(@RequestParam("file") MultipartFile _file) {
-        String message = "";
+    public ResponseEntity<ResponseMessage> upload(@RequestParam("file") MultipartFile file) {
+        String message;
         try {
-            storageService.save(_file);
-            message = "Uploaded the file successfully: " + _file.getOriginalFilename();
+            storageService.save(file);
+            message = "Uploaded the file successfully: " + file.getOriginalFilename();
             return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
         }
         catch (Exception e) {
-            message = "Could not upload the file: " + _file.getOriginalFilename() + "!";
+            message = "Could not upload the file: " + file.getOriginalFilename() + "!";
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
         }
     }
@@ -38,18 +38,21 @@ public class FilesController {
     public ResponseEntity<List<FileInfo>> getListFiles() {
         List<FileInfo> fileInfos = storageService.loadAll().map(path -> {
             String filename = path.getFileName().toString();
-            String url      = MvcUriComponentsBuilder
-                    .fromMethodName(FilesController.class, "getFile", path.getFileName().toString()).build().toString();
-            return new FileInfo(filename, url);
+            String url      = MvcUriComponentsBuilder.fromMethodName(FilesController.class, "getFile", path.getFileName().toString()).build().toString();
+
+            return new FileInfo(filename, url, "component");
         }).collect(Collectors.toList());
         return ResponseEntity.status(HttpStatus.OK).body(fileInfos);
     }
     @GetMapping("/files/{filename:.+}")
     @ResponseBody
-    public ResponseEntity<Resource> getFile(@PathVariable String _filename) {
-        Resource file = storageService.load(_filename);
+    public ResponseEntity<Resource> getFile(@PathVariable String filename) {
+        Resource file = storageService.load(filename);
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
     }
 }
+
+
+
 

@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import UploadService from "../service/upload-files.service";
-import FileHandler from "./FileHandler";
+
 export default class UploadFiles extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            selectedFiles   : undefined,
-            currentFile     : undefined,
-            progress        : 0,
-            message         : "",
-            filesInfos      : [],
+            selectedFiles: undefined,
+            currentFile: undefined,
+            progress: 0,
+            message: "",
+            filesInfos: [],
         };
     }
-    selectedFiles(event) {
+    selectFile(event) {
         this.setState({
             selectedFiles: event.target.files,
         });
@@ -73,7 +73,7 @@ export default class UploadFiles extends Component {
                     <div
                         className="progress-bar progress-bar-info progress-bar-striped"
                         role="progressbar"
-                        aria-valuenow={[progress]}
+                        aria-valuenow={progress}
                         aria-valuemin="0"
                         aria-valuemax="100"
                         style={{ width: progress + "%" }}
@@ -84,7 +84,7 @@ export default class UploadFiles extends Component {
                 )}
                 
                 <label className="btn btn-default">
-                    <input type="file" onChange={this.selectedFile} />
+                    <input type="file" onChange={this.selectFile} />
                 </label>
                 
                 <button className="btn btn-success"
@@ -97,8 +97,8 @@ export default class UploadFiles extends Component {
                     {message}
                 </div>
                 <div className="card">
-                    <div className  ="card-header">List of Files</div>
-                    <ul className   ="list-group list-group-flush">
+                    <div className="card-header">List of Files</div>
+                    <ul className="list-group list-group-flush">
                         {filesInfos &&
                             filesInfos.map((file, index) => (
                                 <li className="list-group-item" key={index}>

@@ -1,8 +1,8 @@
-package com.jvetere.image;
+package com.jvetere.image.colorinfo;
 
 import java.awt.*;
 
-import static com.jvetere.image.FavoriteColor.*;
+import static com.jvetere.image.colorinfo.FavoriteColor.*;
 
 
 
@@ -43,6 +43,7 @@ public class ColorStorage {
             other = (ColorStorage) o;
         }
 
+        assert other != null;
         return red == other.red && green == other.green && blue == other.blue;
     }
     @Override
