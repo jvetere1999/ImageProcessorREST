@@ -17,13 +17,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-@CrossOrigin("http://localhost:8081")
+@CrossOrigin("http://localhost:8080")
 public class FilesController {
     @Autowired
     FileStorageService storageService;
     @PostMapping("/upload")
     public ResponseEntity<ResponseMessage> upload(@RequestParam("file") MultipartFile _file) {
-        String message = "";
+        String message;
         try {
             storageService.save(_file);
             message = "Uploaded the file successfully: " + _file.getOriginalFilename();
@@ -46,8 +46,8 @@ public class FilesController {
     }
     @GetMapping("/files/{filename:.+}")
     @ResponseBody
-    public ResponseEntity<Resource> getFile(@PathVariable String _filename) {
-        Resource file = storageService.load(_filename);
+    public ResponseEntity<Resource> getFile(@PathVariable String filename) {
+        Resource file = storageService.load(filename);
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
     }
