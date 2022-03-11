@@ -15,7 +15,7 @@
     <description>ImageProcessorREST</description>
     <properties>
         <java.version>17</java.version>
-        <start-class>com.jvetere.spring.files.upload.SpringBootUploadFilesApplication.main</start-class>
+        <start-class>src.main.java.com.jvetere.spring.files.upload.SpringBootUploadFilesApplication.main</start-class>
     </properties>
     <dependencies>
         <dependency>
