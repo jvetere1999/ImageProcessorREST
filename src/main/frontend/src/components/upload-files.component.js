@@ -6,11 +6,11 @@ export default class UploadFiles extends Component {
         super(props);
 
         this.state = {
-            selectedFiles   : undefined,
-            currentFile     : undefined,
-            progress        : 0,
-            message         : "",
-            filesInfos      : [],
+            selectedFiles: undefined,
+            currentFile: undefined,
+            progress: 0,
+            message: "",
+            filesInfos: [],
         };
     }
     selectFile(event) {
@@ -97,8 +97,8 @@ export default class UploadFiles extends Component {
                     {message}
                 </div>
                 <div className="card">
-                    <div className  ="card-header">List of Files</div>
-                    <ul className   ="list-group list-group-flush">
+                    <div className="card-header">List of Files</div>
+                    <ul className="list-group list-group-flush">
                         {filesInfos &&
                             filesInfos.map((file, index) => (
                                 <li className="list-group-item" key={index}>
