@@ -84,12 +84,12 @@ export default class UploadFiles extends Component {
                 )}
                 
                 <label className="btn btn-default">
-                    <input type="file" onChange={this.selectFile()} />
+                    <input type="file" onChange={(e) => this.selectFile(e)} />
                 </label>
                 
                 <button className="btn btn-success"
                     disabled={!selectedFiles}
-                    onClick ={this.upload}
+                    onClick ={(e) => this.upload(e)}
                 >
                     Upload
                 </button>
