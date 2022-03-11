@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadFiles from './components/upload-files.component';
 
 
-class App extends Component {
+class App {
   render() {
     return (
     <div className='container' style={{ width: "600px" }}>
