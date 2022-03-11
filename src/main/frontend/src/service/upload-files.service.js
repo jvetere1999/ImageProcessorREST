@@ -12,8 +12,5 @@ class UploadFilesService {
     getFiles() {
         return http.get("/files");
     }
-    getType() {
-        return "component";
-    }
 }
 export default new UploadFilesService();
