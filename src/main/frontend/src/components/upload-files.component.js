@@ -84,7 +84,7 @@ export default class UploadFiles extends Component {
                 )}
                 
                 <label className="btn btn-default">
-                    <input type="file" onChange={this.selectfile} />
+                    <input type="file" onChange={this.selectFile} />
                 </label>
                 
                 <button className="btn btn-success"
