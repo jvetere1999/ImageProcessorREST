@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ImageProcessorREST.iml" filepath="$PROJECT_DIR$/../ImageProcessorREST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageProcessorREST.iml" filepath="$PROJECT_DIR$/ImageProcessorREST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imageio-frontend/imageio-frontend.iml" filepath="$PROJECT_DIR$/imageio-frontend/imageio-frontend.iml" />
     </modules>
   </component>
 </project>
