@@ -88,7 +88,7 @@ export default class UploadFiles extends Component {
                 </label>
                 
                 <button className="btn btn-success"
-                    disabled={!selectedFiles}
+                    disabled={selectedFiles}
                     onClick ={this.upload}
                 >
                     Upload
