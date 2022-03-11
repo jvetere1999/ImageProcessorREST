@@ -13,7 +13,7 @@ export default class UploadFiles extends Component {
             filesInfos      : [],
         };
     }
-    selectedFiles(event) {
+    selectFile(event) {
         this.setState({
             selectedFiles: event.target.files,
         });
