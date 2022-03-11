@@ -1,4 +1,4 @@
-package com.jvetere.processor;
+package com.jvetere.processor.types;
 
 public enum ProcessType {
     DOMINATE_COLOR,

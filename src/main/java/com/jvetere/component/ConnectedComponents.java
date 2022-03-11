@@ -2,6 +2,7 @@ package com.jvetere.component;
 
 
 import com.jvetere.image.*;
+import com.jvetere.image.colorinfo.ColorStorage;
 
 import java.util.ArrayList;
 import java.util.List;

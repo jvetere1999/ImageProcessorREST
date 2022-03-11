@@ -1,4 +1,4 @@
-package com.jvetere.processor;
+package com.jvetere.processor.types;
 
 
 import com.jvetere.image.Image;

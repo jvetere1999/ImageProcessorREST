@@ -1,4 +1,4 @@
-package com.jvetere.processor;
+package com.jvetere.processor.types;
 
 
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class InImageColorProcessor extends Processor{
     String          fileName;
-    ProcessType     type;
+    ProcessType type;
 
     public InImageColorProcessor(String _fileName, ProcessType type) {
         images      = new ArrayList<>();

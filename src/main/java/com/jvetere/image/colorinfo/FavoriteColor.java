@@ -1,4 +1,4 @@
-package com.jvetere.image;
+package com.jvetere.image.colorinfo;
 
 public enum FavoriteColor {
     RED,

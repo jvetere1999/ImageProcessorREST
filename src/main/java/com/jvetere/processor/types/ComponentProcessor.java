@@ -1,4 +1,4 @@
-package com.jvetere.processor;
+package com.jvetere.processor.types;
 
 
 
@@ -13,7 +13,7 @@ public class ComponentProcessor extends Processor {
     int                         pruneSizeUpper;
     String                      fileName;
     Image                       original;
-    ProcessType                 type;
+    ProcessType type;
     ConnectedComponents         components;
 
     public ComponentProcessor(String _fileName, ProcessType _type) {

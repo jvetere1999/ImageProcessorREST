@@ -1,6 +1,6 @@
 package com.jvetere.spring.files.upload.model;
 
-import com.jvetere.processor.ProcessType;
+import com.jvetere.processor.types.ProcessType;
 
 public class FileInfo {
     private String name;

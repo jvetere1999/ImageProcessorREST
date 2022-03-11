@@ -4,7 +4,8 @@ package com.jvetere.image;
 
 
 import com.jvetere.component.Component;
-import com.jvetere.processor.ProcessType;
+import com.jvetere.image.colorinfo.ColorStorage;
+import com.jvetere.processor.types.ProcessType;
 
 import javax.imageio.ImageIO;
 

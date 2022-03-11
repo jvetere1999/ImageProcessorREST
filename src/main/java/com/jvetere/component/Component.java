@@ -1,13 +1,14 @@
 package com.jvetere.component;
 
-import com.jvetere.image.*;
 import com.jvetere.image.Image;
+import com.jvetere.image.colorinfo.ColorStorage;
+import com.jvetere.image.colorinfo.FavoriteColor;
 
 import java.awt.*;
 import java.util.HashMap;
 
 public class Component {
-    public          ColorStorage                    rootColor;
+    public ColorStorage rootColor;
     public          Image                           rootImgPointer;
     private final   int                             DISTANCE = 15;
     public          HashMap<int[], ColorStorage>    component; // int {x, y}
@@ -70,7 +71,7 @@ public class Component {
                 && outGreen   < (rootColor.green   + DISTANCE/2) : (rootColor.green   - DISTANCE) < outGreen
                 && outGreen   < (rootColor.green   + DISTANCE);
         boolean blue    = isDominant(FavoriteColor.BLUE)? (rootColor.blue  - DISTANCE/2) < outBlue  && outBlue  < (rootColor.blue  + DISTANCE/2) :
-                (rootColor.blue  - DISTANCE) < outBlue  && outBlue  < (rootColor.blue  + DISTANCE);;
+                (rootColor.blue  - DISTANCE) < outBlue  && outBlue  < (rootColor.blue  + DISTANCE);
 
         return red && green && blue;
     }
@@ -83,10 +84,10 @@ public class Component {
         xMin = 10000;
         yMin = 10000;
         for (int[] cord: this.component.keySet()) {
-            xMax = xMax < cord[0] ? cord[0] : xMax;
-            yMax = yMax < cord[1] ? cord[1] : yMax;
-            xMin = xMin > cord[0] ? cord[0] : xMin;
-            yMin = yMin > cord[1] ? cord[1] : yMin;
+            xMax = Math.max(xMax, cord[0]);
+            yMax = Math.max(yMax, cord[1]);
+            xMin = Math.min(xMin, cord[0]);
+            yMin = Math.min(yMin, cord[1]);
         }
         int normalizedXMax = xMax - xMin;
         int normalizedYMax = yMax - yMin;

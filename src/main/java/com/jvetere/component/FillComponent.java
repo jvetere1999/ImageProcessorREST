@@ -3,8 +3,8 @@ package com.jvetere.component;
 
 
 
-import com.jvetere.image.*;
 import com.jvetere.image.Image;
+import com.jvetere.image.colorinfo.ColorStorage;
 
 
 import java.awt.*;
@@ -26,10 +26,10 @@ public class FillComponent {
         xMin = 10000;
         yMin = 10000;
         for (int[] cord: com1.component.keySet()) {
-            xMax = xMax < cord[0] ? cord[0] : xMax;
-            yMax = yMax < cord[1] ? cord[1] : yMax;
-            xMin = xMin > cord[0] ? cord[0] : xMin;
-            yMin = yMin > cord[1] ? cord[1] : yMin;
+            xMax = Math.max(xMax, cord[0]);
+            yMax = Math.max(yMax, cord[1]);
+            xMin = Math.min(xMin, cord[0]);
+            yMin = Math.min(yMin, cord[1]);
         }
         int normalizedXMax = xMax - xMin;
         int normalizedYMax = yMax - yMin;
@@ -93,11 +93,7 @@ public class FillComponent {
             if (y+1 < display[0].length && display[x][y+1] == 1)
                 adjacency++;
         }
-        if (adjacency >= 2  )
-            System.out.println(adjacency);
-        if (adjacency == 2 || adjacency == 3)
-            return true;
-        return false;
+        return adjacency == 2 || adjacency == 3;
     }
 
 

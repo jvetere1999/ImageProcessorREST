@@ -1,5 +1,10 @@
 package com.jvetere.processor;
 
+import com.jvetere.processor.types.ComponentProcessor;
+import com.jvetere.processor.types.InImageColorProcessor;
+import com.jvetere.processor.types.ProcessType;
+import com.jvetere.processor.types.Processor;
+
 public class ProcessSelector {
     public static Processor chooseProcess(String _fileName, ProcessType _type) {
         String              fileName;
