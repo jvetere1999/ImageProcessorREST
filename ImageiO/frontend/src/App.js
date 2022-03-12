@@ -2,6 +2,7 @@ import React from 'react';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadFiles from './components/upload-files.component';
+import UploadImages from './components/image-upload.component';
 
 
 function App()  {
@@ -11,7 +12,7 @@ function App()  {
         <h3>ImageProcessor</h3>
         <h4>Upload Files</h4>
       </div>
-      <UploadFiles />
+      <UploadImages />
     </div>
     );
   
