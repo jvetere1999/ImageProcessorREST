@@ -27,6 +27,7 @@ public class FileInfo {
     }
 
     public void setImage(String _fn) {
+        System.out.println(" HERE !!!!!");
         input = new Image(_fn);
         components = new ConnectedComponents(input);
         ArrayList<Component> ogArr;
