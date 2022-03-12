@@ -22,13 +22,13 @@ public class FileInfo {
         url     = _url;
         images  = new ArrayList<>();
         setType(_type);
-        setImage(_url);
         pruneSizeLower  = 59;
         pruneSizeUpper  = 100000;
     }
 
-    public void setImage(String _fn) {
+    public void setImage() {
         System.out.println(" HERE !!!!!");
+        String _fn = "./src/main/images/" + name;
         input = new Image(_fn);
         components = new ConnectedComponents(input);
         ArrayList<Component> ogArr;
@@ -37,7 +37,6 @@ public class FileInfo {
 
         ArrayList<Component> arr        = components.asList();
         ArrayList<Component> pruned     = components.prunedAsList();
-        _fn = _fn.substring(0, _fn.indexOf("."));
         images.add(new Image("src/main/images/pruned.png",
                 arr,
                 input.width,
