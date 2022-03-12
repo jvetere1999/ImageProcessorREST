@@ -13,9 +13,9 @@ export default class UploadImages extends Component {
             imageInfos: [],
         }
     }
-    selecteFile(event) {
+    selectFile(event) {
         this.setState({
-            currentFile: event.target/files[0],
+            currentFile: event.target.files[0],
             previewImage: URL.createObjectURL(event.target.files[0]),
             progress: 0,
             message: ""
