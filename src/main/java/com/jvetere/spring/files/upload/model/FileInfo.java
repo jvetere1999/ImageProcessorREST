@@ -22,6 +22,7 @@ public class FileInfo {
         url     = _url;
         images  = new ArrayList<>();
         setType(_type);
+        setImage(_name);
         pruneSizeLower  = 59;
         pruneSizeUpper  = 100000;
     }
