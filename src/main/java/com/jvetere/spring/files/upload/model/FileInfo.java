@@ -21,6 +21,8 @@ public class FileInfo {
         name    = _name;
         url     = _url;
         images  = new ArrayList<>();
+        System.out.println(_name);
+        System.out.println(_url);
         setType(_type);
         setImage(_name);
         pruneSizeLower  = 59;
