@@ -99,7 +99,7 @@ export default class UploadImages extends Component {
                 )}
                 {previewImage && (
                     <div>
-                       <img className="preview" src={previewImage} alt="User uploaded image" />
+                       <img className="preview" src={previewImage} alt="User uploaded image"/>
                     </div>
                 )}
                 {message && (
