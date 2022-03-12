@@ -70,7 +70,7 @@ export default class UploadImages extends Component {
                 <div className="row">
                     <div className="col-8">
                         <label className="btn btn-default p-0">
-                            <input type="file" accept="image/*" onChange={(e) => this.selecteFile(e)}/>
+                            <input type="file" accept="image/*" onChange={(e) => this.selectFile(e)}/>
                         </label>
                     </div>
                     <div className="col-4">
