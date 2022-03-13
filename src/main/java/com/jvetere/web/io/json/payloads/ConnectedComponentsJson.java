@@ -7,10 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConnectedComponentsJson {
+    public int width, height;
     public List<ComponentJson> components;
 
 
     public ConnectedComponentsJson(ConnectedComponents c) {
+        width = c.img.width;
+        height = c.img.height;
         components = new ArrayList<>();
         List<Component> t = c.asList();
         for (Component a: t){

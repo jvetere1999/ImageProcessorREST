@@ -12,7 +12,7 @@ import java.util.List;
 public class ConnectedComponents {
     List<Component>     components;
     List<Component>     prunedComponent;
-    Image img;
+    public Image img;
     ColorStorage[][]    imgArr;
     int                 componentIndex;
     int                 xLim;

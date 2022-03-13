@@ -1,3 +1,4 @@
+import ColorPage from "../components/color-page.component";
 import http from "../http-common";
 
 class UploadFilesService {
@@ -15,7 +16,7 @@ class UploadFilesService {
     getPackage(_file) {
         let x = http.get(_file).then(response => response.data);
         console.log(x);
-        return x;
+        return ColorPage;
     }
 }
 export default new UploadFilesService();
