@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBui
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Controller
+@RestController
 @CrossOrigin(origins = "http://localhost:8081")
 public class FilesController {
     @Autowired
@@ -48,10 +48,7 @@ public class FilesController {
     }
     @GetMapping("/files/{filename:.+}")
     public ConnectedComponentsJson getFile(@PathVariable String filename) {
-        System.out.println(filename);
-        System.out.println("In getFile");
         ConnectedComponentsJson file = storageService.load(filename);
-        System.out.println();
         return file;
     }
 }
