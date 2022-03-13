@@ -18,11 +18,10 @@ import java.util.stream.Stream;
 @Service
 public class FileStorageServiceImpl implements FileStorageService{
 
-    private final Path root = Paths.get("/src/main/images");
+    private final Path root = Paths.get("./src/main/images");
 
     @Override
     public void init() {
-        Path root = Paths.get("./src/main/images");
         try {Files.createDirectory(root);}
         catch (IOException e){throw new RuntimeException("Could not initialize folder for upload.");}
     }
