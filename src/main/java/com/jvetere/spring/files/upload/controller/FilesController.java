@@ -47,7 +47,6 @@ public class FilesController {
         return ResponseEntity.status(HttpStatus.OK).body(fileInfos);
     }
     @GetMapping("/files/{filename:.+}")
-    @ResponseBody
     public ConnectedComponentsJson getFile(@PathVariable String filename) {
         ConnectedComponentsJson file = storageService.load(filename);
         return file;
