@@ -48,6 +48,8 @@ public class FilesController {
     }
     @GetMapping("/files/{filename:.+}")
     public ConnectedComponentsJson getFile(@PathVariable String filename) {
+        System.out.println(filename);
+        System.out.println("In getFile");
         ConnectedComponentsJson file = storageService.load(filename);
         return file;
     }
