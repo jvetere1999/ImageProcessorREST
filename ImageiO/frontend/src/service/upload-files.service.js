@@ -13,8 +13,9 @@ class UploadFilesService {
         return http.get("/files");
     }
     getPackage(_file) {
-        return http.get(_file)
-            .then(response => setTotalReactPackages(response.data.total));
+        let x = http.get(_file)
+        console.log(x);
+        return x;
     }
 }
 export default new UploadFilesService();
