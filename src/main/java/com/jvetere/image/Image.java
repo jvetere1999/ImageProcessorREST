@@ -126,13 +126,10 @@ public class Image {
      */
     protected void inputImg() {
         try {
-            System.out.println("b4 file");
+            System.out.println(fileName);
             File input = new File(fileName);
-            System.out.println("aftr file");
             img = ImageIO.read(input);
-            System.out.println("Here2");
             height = img.getHeight();
-            System.out.println("Here3");
             width = img.getWidth();
         }
         catch (IOException e ){

@@ -87,11 +87,11 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.8.4" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.15" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:18-ea+10" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:mac-aarch64:18-ea+10" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:18-ea+10" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:18-ea+10" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:mac-aarch64:18-ea+10" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:18-ea+10" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:18-ea+10" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:mac-aarch64:18-ea+10" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:18-ea+10" level="project" />
     <orderEntry type="library" name="Maven: com.github.sarxos:webcam-capture:0.3.12" level="project" />
     <orderEntry type="library" name="Maven: com.nativelibs4java:bridj:0.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
