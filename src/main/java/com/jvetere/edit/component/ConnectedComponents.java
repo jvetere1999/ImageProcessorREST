@@ -2,7 +2,7 @@ package com.jvetere.edit.component;
 
 
 import com.jvetere.edit.image.Image;
-import com.jvetere.image.*;
+
 import com.jvetere.edit.image.colorinfo.ColorStorage;
 import com.jvetere.web.io.json.payloads.ConnectedComponentsJson;
 
