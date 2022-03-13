@@ -51,10 +51,9 @@ public class FilesController {
         System.out.println(filename);
         System.out.println("In getFile");
         ConnectedComponentsJson file = storageService.load(filename);
+        System.out.println();
         return file;
     }
 }
-
-
 
 
