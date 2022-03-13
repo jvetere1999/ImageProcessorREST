@@ -1,5 +1,6 @@
 package com.jvetere.spring.files.upload.controller;
 
+import com.jvetere.json.payloads.ConnectedComponentsJson;
 import com.jvetere.spring.files.upload.message.ResponseMessage;
 import com.jvetere.spring.files.upload.model.FileInfo;
 import com.jvetere.spring.files.upload.service.FileStorageService;
@@ -47,10 +48,9 @@ public class FilesController {
     }
     @GetMapping("/files/{filename:.+}")
     @ResponseBody
-    public ResponseEntity<Resource> getFile(@PathVariable String filename) {
-        Resource file = storageService.load(filename);
-        return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+    public ConnectedComponentsJson getFile(@PathVariable String filename) {
+        ConnectedComponentsJson file = storageService.load(filename);
+        return file;
     }
 }
 

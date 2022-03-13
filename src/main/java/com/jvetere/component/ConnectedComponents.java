@@ -3,6 +3,7 @@ package com.jvetere.component;
 
 import com.jvetere.image.*;
 import com.jvetere.image.colorinfo.ColorStorage;
+import com.jvetere.json.payloads.ConnectedComponentsJson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -138,5 +139,8 @@ public class ConnectedComponents {
             rtr += "\n";
         }
         return rtr;
+    }
+    public ConnectedComponentsJson toJson(){
+        return new ConnectedComponentsJson(this);
     }
 }

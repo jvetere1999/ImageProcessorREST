@@ -2,6 +2,7 @@ package com.jvetere.processor.types;
 
 
 
+import com.google.gson.Gson;
 import com.jvetere.component.Component;
 import com.jvetere.component.ConnectedComponents;
 import com.jvetere.image.Image;
@@ -37,31 +38,35 @@ public class ComponentProcessor extends Processor {
         original            = new Image(fileName);
         images.add(original);
         components          = new ConnectedComponents(original);
-        ArrayList<Component> ogArr;
-        ogArr               = new ArrayList<>(components.asList());
         components.componentPrune(pruneSizeLower,pruneSizeUpper);
-
-        ArrayList<Component> arr        = components.asList();
-        ArrayList<Component> pruned     = components.prunedAsList();
-        fileName = fileName.substring(0, fileName.indexOf("."));
-        images.add(new Image("src/main/images/pruned.png",
-                arr,
-                original.width,
-                original.height));
-
-
-        images.add(new Image("src/main/images/onlyPruned.png",
-                pruned,
-                original.width,
-                original.height));
-
-        images.add(new Image("src/main/images/componentImage.png",
-                ogArr,
-                original.width,
-                original.height));
-
-        Component temp = components.asList().get(1);
-        images.add(temp.createImage());
+        Gson gson = new Gson();
+        String temp = gson.toJson(components.toJson());
+        System.out.println(temp);
+//        ArrayList<Component> ogArr;
+//        ogArr               = new ArrayList<>(components.asList());
+//        components.componentPrune(pruneSizeLower,pruneSizeUpper);
+//
+//        ArrayList<Component> arr        = components.asList();
+//        ArrayList<Component> pruned     = components.prunedAsList();
+//        fileName = fileName.substring(0, fileName.indexOf("."));
+//        images.add(new Image("src/main/images/pruned.png",
+//                arr,
+//                original.width,
+//                original.height));
+//
+//
+//        images.add(new Image("src/main/images/onlyPruned.png",
+//                pruned,
+//                original.width,
+//                original.height));
+//
+//        images.add(new Image("src/main/images/componentImage.png",
+//                ogArr,
+//                original.width,
+//                original.height));
+//
+//        Component temp = components.asList().get(1);
+//        images.add(temp.createImage());
     }
 
 

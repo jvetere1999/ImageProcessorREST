@@ -1,15 +1,15 @@
 package com.jvetere.spring.files.upload.service;
 
+import com.jvetere.component.ConnectedComponents;
+import com.jvetere.image.Image;
+import com.jvetere.json.payloads.ConnectedComponentsJson;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -33,19 +33,11 @@ public class FileStorageServiceImpl implements FileStorageService{
     }
 
     @Override
-    public Resource load(String _filename) {
-        try{
-            Path file = root.resolve(_filename);
-            Resource resource = new UrlResource(file.toUri());
-            if (resource.exists() || resource.isReadable()) {
-                return resource;
-            } else {
-                throw new RuntimeException("Could not read file.");
-            }
-        }
-        catch (MalformedURLException e) {
-            throw new RuntimeException("ERROR: " + e.getMessage());
-        }
+    public ConnectedComponentsJson load(String _filename) {
+        Path file = root.resolve(_filename);
+        ConnectedComponents rtr = new ConnectedComponents(new Image(file.toUri().toString()));
+
+        return new ConnectedComponentsJson(rtr);
     }
 
     @Override

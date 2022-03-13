@@ -1,8 +1,10 @@
 package com.jvetere.component;
 
+import com.google.gson.Gson;
 import com.jvetere.image.Image;
 import com.jvetere.image.colorinfo.ColorStorage;
 import com.jvetere.image.colorinfo.FavoriteColor;
+import com.jvetere.json.payloads.ComponentJson;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -112,6 +114,9 @@ public class Component {
     }
     public int getColor() {
         return rootColor.color.getRGB();
+    }
+    public ComponentJson getJson(){
+        return new ComponentJson(this);
     }
 
 }
