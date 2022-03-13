@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 @Service
 public class FileStorageServiceImpl implements FileStorageService{
 
-    private final Path root = Paths.get("./src/main/images");
+    private final Path root = Paths.get("/src/main/images");
 
     @Override
     public void init() {
