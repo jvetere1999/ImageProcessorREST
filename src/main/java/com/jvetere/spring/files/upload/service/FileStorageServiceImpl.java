@@ -60,7 +60,6 @@ public class FileStorageServiceImpl implements FileStorageService{
         try {
             InputStream file = _file.getInputStream();
             String path = this.root.resolve(_file.getOriginalFilename()).toString();
-            System.out.println(path);
         }
         catch (Exception e){throw new RuntimeException("Could not operate on the file. ERROR: "+e.getMessage());}
     }
