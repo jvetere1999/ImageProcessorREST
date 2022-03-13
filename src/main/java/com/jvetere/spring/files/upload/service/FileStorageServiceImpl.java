@@ -22,6 +22,7 @@ public class FileStorageServiceImpl implements FileStorageService{
 
     @Override
     public void init() {
+        Path root = Paths.get("./src/main/images");
         try {Files.createDirectory(root);}
         catch (IOException e){throw new RuntimeException("Could not initialize folder for upload.");}
     }
