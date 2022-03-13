@@ -37,7 +37,7 @@ public class FileStorageServiceImpl implements FileStorageService{
         Path file = root.resolve(_filename);
         System.out.println(file.toString());
         ConnectedComponents rtr = new ConnectedComponents(new Image(file.toString()));
-
+        System.out.println(rtr.get(0));
         return new ConnectedComponentsJson(rtr);
     }
 
