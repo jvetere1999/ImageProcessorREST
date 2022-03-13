@@ -1,5 +1,6 @@
 package com.jvetere.spring.files.upload.service;
 
+import com.google.gson.Gson;
 import com.jvetere.component.ConnectedComponents;
 import com.jvetere.image.Image;
 import com.jvetere.json.payloads.ConnectedComponentsJson;
@@ -37,7 +38,7 @@ public class FileStorageServiceImpl implements FileStorageService{
         Path file = root.resolve(_filename);
         System.out.println(file.toString());
         ConnectedComponents rtr = new ConnectedComponents(new Image(file.toString()));
-        System.out.println(rtr.get(0));
+        System.out.println(new Gson().toJson(rtr.get(0).getJson()));
         return new ConnectedComponentsJson(rtr);
     }
 
