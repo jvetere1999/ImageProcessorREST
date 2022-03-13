@@ -35,6 +35,7 @@ public class FileStorageServiceImpl implements FileStorageService{
     @Override
     public ConnectedComponentsJson load(String _filename) {
         Path file = root.resolve(_filename);
+        System.out.println(file.toString());
         ConnectedComponents rtr = new ConnectedComponents(new Image(file.toUri().toString()));
 
         return new ConnectedComponentsJson(rtr);
