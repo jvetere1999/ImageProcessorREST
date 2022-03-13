@@ -21,6 +21,9 @@ export default class UploadImages extends Component {
             message: ""
         });
     }
+    imageGet(event, _file) {
+        return UploadService.getPackage(_file)
+;    }
 
     upload() {
         this.setState({
@@ -113,7 +116,7 @@ export default class UploadImages extends Component {
                         {imageInfos &&
                             imageInfos.map((img, index) => (
                                 <li className="list-group-item" key={index}>
-                                    <a href={img.url}>{img.name}</a>
+                                    <a href='#' onClick={(e) => this.imageGet(e, img.url)}>{img.name}</a>
                                 </li>
                             ))}
                     </ul>

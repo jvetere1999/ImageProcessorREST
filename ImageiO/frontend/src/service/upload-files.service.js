@@ -12,5 +12,9 @@ class UploadFilesService {
     getFiles() {
         return http.get("/files");
     }
+    getPackage(_file) {
+        return http.get(_file)
+            .then(response => setTotalReactPackages(response.data.total));
+    }
 }
 export default new UploadFilesService();
