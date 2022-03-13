@@ -13,7 +13,7 @@ class UploadFilesService {
         return http.get("/files");
     }
     getPackage(_file) {
-        let x = http.get(_file)
+        let x = http.get(_file).then(response => response.data);
         console.log(x);
         return x;
     }
