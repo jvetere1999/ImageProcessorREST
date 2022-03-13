@@ -6,18 +6,21 @@ import com.jvetere.component.Component;
 import com.jvetere.component.ConnectedComponents;
 import com.jvetere.component.FillComponent;
 import com.jvetere.image.Image;
+import com.jvetere.processor.types.ComponentProcessor;
+import com.jvetere.processor.types.ProcessType;
+import com.jvetere.processor.types.Processor;
 
 import java.util.ArrayList;
 
 public class ImageUtils {
     public static ArrayList<Image> images = new ArrayList<>();
-//    public static void main (String[] args) {
-//       // GUI.main(args);
-//        String fn          = "src/main/java/com/jvetere/images/airplane.png";
-//        Processor test = new ComponentProcessor(fn, ProcessType.COMPONENT_MAP, 100, 2000);
-//        Thread t = new Thread(test);
-//        t.start();
-//    }
+    public static void main (String[] args) {
+       // GUI.main(args);
+        String fn          = "src/main/java/com/jvetere/images/airplane.png";
+        Processor test = new ComponentProcessor(fn, ProcessType.COMPONENT_MAP, 100, 2000);
+        Thread t = new Thread(test);
+        t.start();
+    }
 
     public static void createImage(String fn) {
        try {

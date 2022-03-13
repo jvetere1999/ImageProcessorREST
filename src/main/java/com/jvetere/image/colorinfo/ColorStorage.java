@@ -1,5 +1,8 @@
 package com.jvetere.image.colorinfo;
 
+import com.google.gson.Gson;
+import com.jvetere.json.payloads.PixelJson;
+
 import java.awt.*;
 
 import static com.jvetere.image.colorinfo.FavoriteColor.*;
@@ -50,5 +53,6 @@ public class ColorStorage {
     public String toString() {
         return red + " " + green + " " + blue;
     }
+
 
 }
