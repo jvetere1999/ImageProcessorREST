@@ -2,13 +2,13 @@ package com.jvetere.runtime;
 
 
 
-import com.jvetere.component.Component;
-import com.jvetere.component.ConnectedComponents;
-import com.jvetere.component.FillComponent;
-import com.jvetere.image.Image;
-import com.jvetere.processor.types.ComponentProcessor;
-import com.jvetere.processor.types.ProcessType;
-import com.jvetere.processor.types.Processor;
+import com.jvetere.edit.component.Component;
+import com.jvetere.edit.component.ConnectedComponents;
+import com.jvetere.edit.component.FillComponent;
+import com.jvetere.edit.image.Image;
+import com.jvetere.edit.processor.processor.types.ComponentProcessor;
+import com.jvetere.edit.processor.processor.types.ProcessType;
+import com.jvetere.edit.processor.processor.types.Processor;
 
 import java.util.ArrayList;
 
