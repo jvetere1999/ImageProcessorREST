@@ -1,4 +1,4 @@
-waimport React, { Component } from 'react';
+import React, { Component } from 'react';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadImages from './components/image-upload.component';
