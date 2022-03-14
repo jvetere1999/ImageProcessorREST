@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './tests/reportWebVitals';
 
 ReactDOM.render(
-  <App />,
+  <ColorPage />,
   document.getElementById('root')
 );
 
