@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PixelGrid from "react-pixel-grid";
-import colorPageService from "../service/color-page.service";
+
 
 export default class ColorPage extends Component {
     render() {
