@@ -12,7 +12,12 @@ export default class App extends Component {
     this.state = {
       curremtComponent: 'upload',
     };
-}
+  }
+  switchComponent(comp) {
+    this.setState({
+      curremtComponent: comp,
+    })
+  }
   getComponent(){
     let component;
     switch(this.state.curremtComponent){
@@ -22,8 +27,6 @@ export default class App extends Component {
       case 'grid':
         component = <ColorPage/>
         break;
-      default:
-        component = <UploadImages/>
     }
     return component;
   }
