@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
 import App from './App';
+import ColorPage from './components/color-page.component';
 import reportWebVitals from './tests/reportWebVitals';
 
 ReactDOM.render(
