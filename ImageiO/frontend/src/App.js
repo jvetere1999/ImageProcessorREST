@@ -10,7 +10,7 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      curremtComponent: 'upload',
+      curremtComponent: 'grid',
     };
   }
   switchComponent(comp) {

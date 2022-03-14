@@ -23,7 +23,7 @@ export default class UploadImages extends Component {
         });
     }
     imageGet(event, _file) {
-        App.switchComponent('grid');
+       
         return UploadService.getPackage(_file);
 ;    }
 
