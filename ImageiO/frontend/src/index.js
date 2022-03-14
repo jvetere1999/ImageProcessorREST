@@ -6,7 +6,10 @@ import ColorPage from './components/color-page.component';
 import reportWebVitals from './tests/reportWebVitals';
 
 ReactDOM.render(
-  <ColorPage />,
+  <div>
+    <ColorPage />
+    <App />
+  </div>,
   document.getElementById('root')
 );
 
