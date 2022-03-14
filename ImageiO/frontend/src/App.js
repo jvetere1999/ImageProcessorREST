@@ -3,6 +3,7 @@ import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadImages from './components/image-upload.component';;
 import PixelGrid from "react-pixel-grid";
+import ColorPage from "./components/color-page.component";
 
 
 function App() {
@@ -13,14 +14,7 @@ function App() {
           <h4>Upload Files</h4>
         </div>
         <UploadImages/>
-          <PixelGrid
-              data={Array(64).fill(0).map(Math.random)}
-              options={{
-                  size: 10,
-                  padding: 2,
-                  background: [0, 0.5, 1],
-              }}
-          />
+        <ColorPage/>
       </div>
       );
 }
