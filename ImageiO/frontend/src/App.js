@@ -5,8 +5,7 @@ import UploadImages from './components/image-upload.component';
 import ColorPage from './components/color-page.component';
 
 
-export default class App extends Component {
-  render(){
+function App() {
     return (
       <div className='container' style={{ width: "600px" }}>
         <div style={{ margin: "20px" }}>
@@ -17,7 +16,6 @@ export default class App extends Component {
         <UploadImages/>
       </div>
       );
-  }
-  
 }
+export default App;
 
