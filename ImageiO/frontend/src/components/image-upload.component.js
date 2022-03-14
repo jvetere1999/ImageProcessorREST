@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import App from "../App";
 import UploadService from "../service/upload-files.service";
 
 export default class UploadImages extends Component {
@@ -22,6 +23,7 @@ export default class UploadImages extends Component {
         });
     }
     imageGet(event, _file) {
+        App.state.curremtComponent = "grid"
         return UploadService.getPackage(_file)
 ;    }
 
@@ -60,6 +62,7 @@ export default class UploadImages extends Component {
             });
         });
     }
+    
     render() {
         const {
             currentFile,
