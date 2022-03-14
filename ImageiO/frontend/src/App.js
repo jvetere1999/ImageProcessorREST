@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import UploadFiles from './components/upload-files.component';
 import UploadImages from './components/image-upload.component';
-import { render } from '@testing-library/react';
+import ColorPage from './components/color-page.component';
 
 
 export default class App extends Component {
@@ -11,13 +10,13 @@ export default class App extends Component {
     let component;
     switch(this.state.curremtComponent){
       case 'upload':
-        component = <UploadFiles/>
+        component = <UploadImages/>
         break;
       case 'grid':
         component = <ColorPage/>
         break;
       default:
-        component = <UploadFiles/>
+        component = <UploadImages/>
     }
     return component;
   }
