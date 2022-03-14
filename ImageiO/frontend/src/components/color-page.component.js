@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PixelGrid from "react-pixel-grid";
 
 
-export default class ColorPage extends Component {
+class ColorPage extends Component {
     constructor(props, data){
         super(props);
         this.state = {
@@ -27,3 +27,4 @@ export default class ColorPage extends Component {
        );
     }
 }
+export default new ColorPage();
