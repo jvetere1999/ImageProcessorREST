@@ -6,6 +6,13 @@ import ColorPage from './components/color-page.component';
 
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      curremtComponent: 'upload',
+    };
+}
   getComponent(){
     let component;
     switch(this.state.curremtComponent){
