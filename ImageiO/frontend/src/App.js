@@ -34,7 +34,7 @@ export default class App extends Component {
           <h3>ImageProcessor</h3>
           <h4>Upload Files</h4>
         </div>
-        {this.getComponent}
+        {this.getComponent()}
       </div>
       );
   }
