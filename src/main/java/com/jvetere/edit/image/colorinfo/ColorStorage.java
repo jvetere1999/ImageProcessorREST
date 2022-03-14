@@ -1,5 +1,8 @@
 package com.jvetere.edit.image.colorinfo;
 
+import com.google.gson.Gson;
+import com.jvetere.json.payloads.PixelJson;
+
 import java.awt.*;
 
 
