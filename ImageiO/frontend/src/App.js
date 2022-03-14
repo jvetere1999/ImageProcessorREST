@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadImages from './components/image-upload.component';
@@ -12,7 +12,6 @@ function App() {
           <h3>ImageProcessor</h3>
           <h4>Upload Files</h4>
         </div>
-        <ColorPage/>
         <UploadImages/>
       </div>
       );
