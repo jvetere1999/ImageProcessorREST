@@ -3,6 +3,15 @@ import PixelGrid from "react-pixel-grid";
 
 
 export default class ColorPage extends Component {
+    constructor(props, data){
+        super(props);
+        this.state = {
+            data: data,
+        }
+    }
+    setData(data){
+        this.setState({data: data});
+    }
     render() {
        return(
        <div>

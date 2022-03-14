@@ -16,7 +16,8 @@ class UploadFilesService {
     getPackage(_file) {
         let x = http.get(_file).then(response => response.data);
         console.log(x);
-        return ColorPage;
+        ColorPage(x);
+        return ColorPage(x);
     }
 }
 export default new UploadFilesService();
