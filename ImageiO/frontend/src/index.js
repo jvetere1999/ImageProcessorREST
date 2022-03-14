@@ -7,7 +7,7 @@ import reportWebVitals from './tests/reportWebVitals';
 
 ReactDOM.render(
   <div>
-    <ColorPage />
+    
     <App />
   </div>,
   document.getElementById('root')

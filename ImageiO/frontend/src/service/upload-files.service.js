@@ -16,7 +16,7 @@ class UploadFilesService {
     getPackage(_file) {
         let x = http.get(_file).then(response => response.data);
         console.log(x);
-        App.switchComponent();
+        
         return ColorPage(x);
     }
 }
