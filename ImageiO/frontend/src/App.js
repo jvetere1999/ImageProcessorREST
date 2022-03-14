@@ -34,10 +34,11 @@ export default class App extends Component {
     return (
       <div className='container' style={{ width: "600px" }}>
         <div style={{ margin: "20px" }}>
+            <ColorPage />
           <h3>ImageProcessor</h3>
           <h4>Upload Files</h4>
         </div>
-        {this.getComponent()}
+        <UploadImages/>
       </div>
       );
   }
