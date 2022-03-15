@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
-import "./style/App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import UploadImages from './components/image-upload.component';;
 import { BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 import ColorPage from "./components/color-page.component";
+import UploadImages from './components/image-upload.component';;
 import http from "./http-common";
+import "./style/App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 
 
