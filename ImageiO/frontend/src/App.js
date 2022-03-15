@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadImages from './components/image-upload.component';;
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import ColorPage from "./components/color-page.component";
 import http from "./http-common";
 
