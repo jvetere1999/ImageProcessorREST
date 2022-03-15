@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/upload/:name" element={<Upload />} />
-          <Route path="/files" component={Image} />
+          <Route path="/files" element={<Image />} />
         </Routes>
       </main>
     </Router>
