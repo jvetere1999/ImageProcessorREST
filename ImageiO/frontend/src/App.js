@@ -5,6 +5,7 @@ import UploadImages from './components/image-upload.component';;
 import http from "./http-common";
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import UploadService from './service/upload-files.service';
 
 
 
@@ -54,7 +55,7 @@ const Upload = () => (
 const Image = ({match:{params:{name}}}) => (
   <Fragment>
     <h1>Image</h1>
-    <ColorPage/>
+    <ColorPage data = {UploadService.getPackage(name)}/>
   </Fragment>
 );
 
