@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PixelGrid from "react-pixel-grid";
 
 
-const ColorPage = (props) => {
+export const ColorPage = (props) => {
     const {data} = props;
     return(
     <div>
