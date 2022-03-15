@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 import ColorPage from "./components/color-page.component";
 import UploadImages from './components/image-upload.component';;
 import http from "./http-common";
+import UploadService from './service/upload-files.service';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import UploadService from './service/upload-files.service';
-
 
 
 
@@ -54,7 +53,7 @@ const Upload = () => (
 );
 const Image = (props) => (
   <Fragment>
-    <ColorPage data ={(e) => this.imageGet(e, props.name)} />
+    <ColorPage  />
   </Fragment>
 );
 
