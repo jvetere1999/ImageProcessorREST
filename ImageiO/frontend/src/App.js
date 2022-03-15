@@ -2,9 +2,10 @@ import React, { Fragment } from 'react';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadImages from './components/image-upload.component';;
-import PixelGrid from "react-pixel-grid";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ColorPage from "./components/color-page.component";
-import { Route } from 'react-router-dom';
+import http from "../http-common";
+
 
 
 function App() {

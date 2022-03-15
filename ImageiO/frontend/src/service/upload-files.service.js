@@ -1,6 +1,6 @@
-import ColorPage from "../components/color-page.component";
+
 import http from "../http-common";
-import App from "../App";
+
 class UploadFilesService {
     upload(file, onUploadProgress) {
         let formData = new FormData();
@@ -16,8 +16,7 @@ class UploadFilesService {
     getPackage(_file) {
         let x = http.get(_file).then(response => response.data);
         console.log(x);
-        App.switchComponent();
-        return ColorPage(x);
+        return x;
     }
 }
 export default new UploadFilesService();
