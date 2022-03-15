@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UploadImages from './components/image-upload.component';;
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 import ColorPage from "./components/color-page.component";
 import http from "./http-common";
 
@@ -20,9 +20,11 @@ function App() {
             <li><Link to={`/files/${name}`}>Images</Link></li>
           </ul>
         </nav>
-        <Route path="/" exact component={Home} />
-        <Route path="/upload/:name" component={Upload} />
-        <Route path="/files" component={Image} />
+        <Routes>
+          <Route path="/" exact component={Home} />
+          <Route path="/upload/:name" component={Upload} />
+          <Route path="/files" component={Image} />
+        </Routes>
       </main>
     </Router>
 
