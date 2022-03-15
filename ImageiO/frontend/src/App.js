@@ -55,6 +55,7 @@ const Upload = () => (
 const Image = ({match:{params:{name}}}) => (
   <Fragment>
     <h1>Image</h1>
+    UploadService.getPackage(params.name)
     <ColorPage data = {UploadService.getPackage(params.name)}/>
   </Fragment>
 );
