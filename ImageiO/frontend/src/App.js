@@ -10,7 +10,6 @@ import http from "./http-common";
 
 function App() {
   const name = 'John Doe';
-  
   return (
     <Router>
       <main>
@@ -21,11 +20,11 @@ function App() {
             <li><Link to={`/files/${name}`}>Images</Link></li>
           </ul>
         </nav>
-      <switch>
+      <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/upload/:name" exact component={Upload} />
         <Route path="/files" exact component={Image} />
-      </switch>
+      </Switch>
       </main>
     </Router>
 
