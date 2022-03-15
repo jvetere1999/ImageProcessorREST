@@ -20,7 +20,7 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/upload">Upload</Link></li>
-            <li><Link to={`/files/${name}`}>Images</Link></li>
+            {/* <li><Link to={`/files/${name}`}>Images</Link></li> */}
           </ul>
         </nav>
         <Routes>
