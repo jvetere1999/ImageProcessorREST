@@ -19,11 +19,11 @@ function App() {
               <li><Link to={`/files/${name}`}>Images</Link></li>
             </ul>
           </nav>
-        <Switch>
+        <switch>
           <Route path="/" exact component={Home} />
           <Route path="/upload/:name" exact component={Upload} />
           <Route path="/files" exact component={Image} />
-        </Switch>
+        </switch>
         </main>
       </Router>
 
