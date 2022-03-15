@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/upload" element={<Upload />} />
-          <Route path="/files/:name" element={<Image/>} />
+          <Route path="/files/:name" element={<Image props = {name}/>} />
         </Routes>
       </main>
     </Router>
