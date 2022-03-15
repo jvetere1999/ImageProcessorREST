@@ -9,26 +9,28 @@ import http from "./http-common";
 
 
 function App() {
-    return (
-      <Router>
-        <main>
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/upload">Upload</Link></li>
-              <li><Link to={`/files/${name}`}>Images</Link></li>
-            </ul>
-          </nav>
-        <switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/upload/:name" exact component={Upload} />
-          <Route path="/files" exact component={Image} />
-        </switch>
-        </main>
-      </Router>
+  const name = 'John Doe';
+  
+  return (
+    <Router>
+      <main>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/upload">Upload</Link></li>
+            <li><Link to={`/files/${name}`}>Images</Link></li>
+          </ul>
+        </nav>
+      <switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/upload/:name" exact component={Upload} />
+        <Route path="/files" exact component={Image} />
+      </switch>
+      </main>
+    </Router>
 
-     
-      );
+    
+    );
 }
 export default App;
 
