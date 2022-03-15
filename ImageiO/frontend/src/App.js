@@ -26,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/upload" element={<Upload />} />
-          <Route path="/files/:name" element={<Image />} />
+          <Route path="/files/:name" element={<Image />)} />
         </Routes>
       </main>
     </Router>
@@ -52,10 +52,10 @@ const Upload = () => (
     </div>
   </Fragment>
 );
-const Image = ({match:{param:{name}}}) => (
+const Image = ({match:{params:{name}}}) => (
   <Fragment>
     <h1>Image</h1>
-    <ColorPage data = {UploadService.getPackage(name)}/>
+    <ColorPage data = {UploadService.getPackage(params.name)}/>
   </Fragment>
 );
 
