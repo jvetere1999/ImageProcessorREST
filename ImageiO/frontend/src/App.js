@@ -52,7 +52,7 @@ const Upload = () => (
     </div>
   </Fragment>
 );
-const Image = ({match:{params:{name}}}) => (
+const Image = ({match:{param:{name}}}) => (
   <Fragment>
     <h1>Image</h1>
     <ColorPage data = {UploadService.getPackage(name)}/>
