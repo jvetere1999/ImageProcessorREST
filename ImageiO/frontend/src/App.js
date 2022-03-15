@@ -22,8 +22,8 @@ function App() {
         </nav>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/upload/:name" exact component={Upload} />
-        <Route path="/files" exact component={Image} />
+        <Route path="/upload/:name" component={Upload} />
+        <Route path="/files" component={Image} />
       </Switch>
       </main>
     </Router>
