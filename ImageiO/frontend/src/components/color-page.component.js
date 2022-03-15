@@ -8,6 +8,10 @@ export default class ColorPage extends Component {
         this.state = {
             data: _data,
         }
+        this.print();
+    }
+    print() {
+        console.log(this.state.data);
     }
     render() {
        return(
@@ -23,7 +27,4 @@ export default class ColorPage extends Component {
        </div>
        );
     }
-}
-export const ColorPaged = (props) => {
-    this.setState
 }
