@@ -53,7 +53,6 @@ const Upload = () => (
 );
 const Image = (props) => (
   <Fragment>
-    <ColorPage  />
+    <ColorPage  props/>
   </Fragment>
 );
-
