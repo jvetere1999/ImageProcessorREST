@@ -119,7 +119,7 @@ export default class UploadImages extends Component {
                         {imageInfos &&
                             imageInfos.map((img, index) => (
                                 <li className="list-group-item" key={index}>
-                                    <Link to={`/files/${img.name}`} 
+                                    <Link to={`/files/${img.url}`} 
                                     onClick={(e) => this.imageGet(e, img.url)}>{img.name}</Link> 
                                 </li>
                             ))}
