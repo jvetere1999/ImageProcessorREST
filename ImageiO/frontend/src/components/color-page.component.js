@@ -2,16 +2,7 @@ import React, { Component } from "react";
 import PixelGrid from "react-pixel-grid";
 
 
-export default class ColorPage extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            data: undefined,
-        }
-    }
-    setData(data){
-        this.setState({data: data});
-    }
+export default class ColorPage extends Component { 
     render() {
        return(
        <div>
