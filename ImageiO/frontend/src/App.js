@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import UploadImages from './components/image-upload.component';;
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ColorPage from "./components/color-page.component";
-import http from "../http-common";
+import http from "./http-common";
 
 
 
