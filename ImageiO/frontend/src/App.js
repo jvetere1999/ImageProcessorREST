@@ -22,8 +22,8 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" exact element={<Home/>} />
-          <Route path="/upload/:name" element={<Upload />} />
-          <Route path="/files" element={<Image />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/files/:name" element={<Image />} />
         </Routes>
       </main>
     </Router>
