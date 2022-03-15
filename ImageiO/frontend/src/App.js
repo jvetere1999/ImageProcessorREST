@@ -54,7 +54,7 @@ const Upload = () => (
 );
 const Image = (props) => (
   <Fragment>
-    <ColorPage _data ={(e) => this.imageGet(e, props.name)} />
+    <ColorPage data ={(e) => this.imageGet(e, props.name)} />
   </Fragment>
 );
 
