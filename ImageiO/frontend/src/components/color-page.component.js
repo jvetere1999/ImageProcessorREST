@@ -11,7 +11,7 @@ export default class ColorPage extends Component {
         this.print();
     }
     print() {
-        console.log(this.state.data);
+        console.log(this.getState(data));
     }
     render() {
        return(
