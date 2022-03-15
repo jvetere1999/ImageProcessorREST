@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
-import ColorPage from "./components/color-page.component";
+import {ColorPage} from "./components/color-page.component";
 import UploadImages from './components/image-upload.component';;
 import http from "./http-common";
 import "./style/App.css";
